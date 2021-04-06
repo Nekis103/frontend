@@ -1,0 +1,283 @@
+<html>
+<meta charset="UTF-8">
+<title> home</title>
+<link rel="stylesheet" href="main.css" >
+
+<script src="main.js"></script>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+<body>
+<main class="container">
+	<section class="sidebar">
+		<div class="item">
+			<img src="log1.png" height="80px" width="80px" id="home_menu"  title="Запуск ракеты" class="menu" >
+		</div>
+		<div class="item">
+			<img src="creiser.png" height="60px" width="60px"   id="home_rocket" title="Выбор ракеты" class="menu opac" >
+		</div>
+		<div class="item">
+			<img src="item3.png" height="60px" width="60px" class="menu opac" title="Выбор команды" id="home_team"  >
+		</div>
+		<div class="item">
+			<img src="item4.png" height="60px" width="60px" class="menu opac" title="Проверка погоды" id="home_weather" >
+		</div>
+		
+	</section>
+	<div class="mainhome tag" id="5">
+		<section class="sub-main">
+			<div class="sub-item-main">	
+				<div class="sub-head">
+					<div class="sub-head-bot sub-status bold" >Статус</div>
+					<div class= "going" id="GO_IN_SPACE"  onclick="checking_GO_IN_space()">Поехали!</div>				
+				</div>	
+				<div class="sub-status">
+						<div class="sub-status-item"><img src="iconn1.png" id="Rocket_select"  height="20px" width="20px" ></div>
+						<div class="sub-status-item">Ракета выбрана</div>
+						<div class="sub-status-item"><img src="iconn1.png" id="team_select" height="20px" width="20px"></div>
+						<div class="sub-status-item">Команда собрана</div>
+						<div class="sub-status-item"><img src="iconn1.png" id="weather_select" height="20px" width="20px"></div>
+						<div class="sub-status-item">Погода - ок</div>				
+				</div>
+			</div>
+			<div class="sub-item-main">	
+			<div class="sub-head sub-head-bot">
+				<div class="bold">Погодные условия</div>
+			</div>
+				<div class="sub-weather">
+					<div class="sub-main-item">Локация</div>
+					<div class="sub-main-item" id="weather_select_loc">Не выбран</div>
+					<div class="sub-main-item">Температура</div>
+					<div class="sub-main-item" id="weather_select_temp">Не выбран</div>
+					<div class="sub-main-item">  Влажность</div>
+					<div class="sub-main-item" id="weather_select_hum">Не выбран</div>
+					<div class="sub-main-item">Ветер</div>
+					<div class="sub-main-item" id="weather_select_wind">Не выбран</div>
+				</div>
+			</div>
+			
+			<div class="sub-item-main">	
+			<div class="sub-head sub-head-bot">
+				<div class="bold">Экипаж</div>
+			</div>
+				<div class="sub-weather">
+					<div class="sub-main-item weather-color">Капитан</div>
+					<div class="sub-main-item" id="select_cap_name">Не выбран</div>
+					<div class="sub-main-item weather-color">Борт инженер</div>
+					<div class="sub-main-item" id="select_eger_name">Не выбран</div>
+					<div class="sub-main-item weather-color">Врач</div>
+					<div class="sub-main-item" id="select_doc_name">Не выбран</div>
+					<div class="sub-main-item weather-color">Космодеснтник</div>
+					<div class="sub-main-item" id="select_marine_name">Не выбран</div>
+				</div>
+			</div>
+		</section>
+		<section class="sub-main-pic">
+		<div><img src="planets.png" class="kosm"></div>
+		<div class="max_img" ><img src="rocket3.png" class="rock rotet "  id="main_icon" ></div>
+		</section>
+	</div>
+	<div class="mainrocket tag" id="6">
+		<section class="sub-rocket">
+		
+			<div class="sub-rocket-head">
+			Выбор корабля
+			</div>
+			<div class="sub-rocket-cont">
+				<div class="sub-rocket-main sub-item-main">
+				
+					<div class="sub-rocket-header sub-head">
+						<div class="sub-head-bot sub-status bold">Корабль</div>
+						<div class= "going button-rocket" id="button_rocket" onclick="checking_rocket()" >Собрать ракету</div>
+					</div>
+					<div class="sub-rocket-mainer">
+						<div class="item"> <img src="rocket3.png"  height="80px" width="85px" class="img-rock" id="rock-icon"></div>
+						<div class="sub-rocket-mainer-items " >
+							<div class="sub-rocket-mainer-item sub-main-item">Имя</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="rock_name">Сокол-345</div>
+							<div class="sub-rocket-mainer-item sub-main-item">Скорость</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="rock_speed">8 км\с</div>
+							<div class="sub-rocket-mainer-item sub-main-item">Экипаж</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="rock_teamNumber">2</div>
+						</div>
+					</div>
+				</div>
+				<div></div>
+			</div>
+		</section>
+		<section class="sub-rockets">
+		
+			<div class="sub-item-rocket sub-item-main">
+				<div class="opa">
+					<div class="item" > 
+					 <img src="rocket3.png"  height="80px" width="85px" class="img-rock">
+						
+					</div>
+					<div class="rocket_item"  >
+						<div class="sub-rocket-mainer-item sub-main-item" >Имя</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Сокол-345</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Скорость</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >8 км\с</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Экипаж</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >2</div>
+					</div>
+				</div>
+				<div class="contclick" >
+				<div class="radio_block" id="rocket-1">
+					<label class="radio" >
+					<input type="radio" id="shatl1" name="terma" value="terma1" />
+					<div class="radio__text"> <label for="shatl1">Выбрать</label></div>
+					</label>
+					</div>
+				</div>
+				
+			</div>
+			<div class="sub-item-rocket sub-item-main">
+				<div class="opa">
+					<div class="item" > 
+					 <img src="rocket1.png"  height="80px" width="85px" class="img-rock">
+						
+					</div>
+					<div class="rocket_item"  >
+						<div class="sub-rocket-mainer-item sub-main-item" >Имя</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >УКС-982</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Скорость</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >12км\с</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Экипаж</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >4</div>
+					</div>
+				</div>
+				<div class="contclick">
+				<div class="radio_block">
+					<label class="radio" >
+					<input type="radio" id="shatl2" name="terma" value="terma1"   />
+					<div class="radio__text"> <label for="shatl2">Выбрать</label></div>
+					</label>
+					</div>
+				</div>
+				
+			</div>
+			<div class="sub-item-rocket sub-item-main">
+				<div class="opa">
+					<div class="item" > 
+					 <img src="rocket2.png"  height="80px" width="85px" class="img-rock">
+						
+					</div>
+					<div class="rocket_item " id="rocket-3" >
+						<div class="sub-rocket-mainer-item sub-main-item" >Имя</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >T-8752</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Скорость</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >10 км\с</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >Экипаж</div>
+						<div class="sub-rocket-mainer-item sub-main-item" >3</div>
+					</div>
+				</div>
+				<div class="contclick">
+					<div class="radio_block">
+						<label class="radio" >
+						<input type="radio" id="shatl3" name="terma" value="terma1" />
+						<div class="radio__text"> <label for="shatl3">Выбрать</label></div>
+						</label>
+					</div>
+				</div>
+				
+			</div>
+		</section>
+	</div>
+	<div class="mainteam tag" id="7">
+		<section class="sub-team">
+		
+			<div class="sub-team-head">
+			Сбор команды
+			</div>
+			<div class="sub-team-main ">
+				<div class="sub-item-main sub-team-item-main">
+					<div class=" sub-head sub-head_team ">
+						<div class=" bold header_team" >Команда</div>
+						<div class= "going " id="team_ok"  onclick="checking_team()">Готово</div>				
+					</div>
+					<div>
+						<div class="sub-weather sub_team">
+							<div class="sub-main-item weather-color border_0 " >Капитан</div>
+							<div class="sub-main-item border_0 style_cont_team" id="capitans_rocket">  </div>
+							<div class="sub-main-item weather-color border_0 " >Борт инженер </div>
+							<div class="sub-main-item border_0 style_cont_team" id="engeneers_rocker"></div>
+							<div class="sub-main-item weather-color border_0 " >Врач</div>
+							<div class="sub-main-item border_0 style_cont_team" id="doctors_rocker"></div>
+							<div class="sub-main-item weather-color border_0 " >Космодеснтник</div>
+							<div class="sub-main-item border_0 style_cont_team " id="space_marines_rocket"></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="sub-item-main sub-team-item-main">
+					<div class="sub-head  ">
+						<div class=" header_team bold">Корабль</div>
+					</div>
+					<div class="sub-rocket-mainer">
+						<div class="item"> <img src=""  height="80px" width="85px" class="img-rock" id="select_rock-icon"></div>
+						<div class="sub-rocket-mainer-items " >
+							<div class="sub-rocket-mainer-item sub-main-item">Имя</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="select_rock_name"></div>
+							<div class="sub-rocket-mainer-item sub-main-item">Скорость</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="select_rock_speed"></div>
+							<div class="sub-rocket-mainer-item sub-main-item">Экипаж</div>
+							<div class="sub-rocket-mainer-item sub-main-item" id="select_rock_teamNumber"></div>
+						</div>
+					</div>
+				</div>
+				<div class="sub-item-main team_item_main" id="head_capitan">
+					<div class="sub-head sub_head_team_pad ">
+						<div class=" header_team bold pinc   ">Капитан</div>
+					</div>
+					
+				</div>
+				<div class="sub-item-main team_item_main" id="head_engeneer">
+					<div class="sub-head sub_head_team_pad ">
+						<div class=" header_team bold orange">Борт инженер</div>
+					</div>
+				</div>
+				<div class="sub-item-main team_item_main" id="head_doctor">
+					<div class="sub-head  ">
+						<div class=" header_team bold green">Врач</div>
+					</div>
+				</div>
+				<div class="sub-item-main team_item_main" id="head_space_marine">
+					<div class="sub-head  ">
+						<div class=" header_team bold blue   ">Космодеснтник</div>
+					</div>
+					
+				</div>
+				
+			</div>
+		</section>
+		
+	</div>
+	<div class="mainweather tag" id="7">
+		<section class="sub-weatherr">
+		
+			<div class="sub-weatherr-head">
+			Проверка погодных условий
+			</div>
+			<div class="sub-item-main sub-weather-main">	
+			<div class="sub-head sub-head-bot">
+				<div class="bold weather_go">Погодные условия</div>
+				<div class="button_weather" ><input type="submit" value="Проверить" class="submit going bold" id="button_id">
+				</div>
+			</div>
+				<div class="sub-weather sub_wather">
+					<div class="sub-main-item">Локация</div>
+					<div class="sub-main-item input_div"><input type="text" placeholder="Введите название города" class="input_text" id="input_text"></div>
+					<div class="sub-main-item">Температура</div>
+					<div class="sub-main-item" id="temp_id">Не выбран</div>
+					<div class="sub-main-item">  Влажность</div>
+					<div class="sub-main-item" id="humidity_id">Не выбран</div>
+					<div class="sub-main-item">Ветер</div>
+					<div class="sub-main-item" id="wind_id">Не выбран</div>
+				</div>
+			</div>
+		</section>
+		
+	</div>
+</body>
+</html>
