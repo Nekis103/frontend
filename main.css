@@ -15,10 +15,10 @@ grid-template: [start] "sidebar main" [end] /10% 1fr}
 	grid-area:sidebar;
 	background: #FF5800;
 	border-radius: 38px 0px 0px 38px;
-	height:100%;
+	height:800px;
 	width:100%;
 	display:grid;
-   grid-template-rows: 23% 14% 14% 14% ;
+   grid-template-rows: 23% 14% 14% 14% 1fr ;
 	
 }
 
@@ -76,7 +76,7 @@ grid-template: [start] "sidebar main" [end] /10% 1fr}
 .sub-status
 {
 	display:grid;
-	grid-template-columns:5% 95%;
+	
 	padding:10px;
 	padding-left:15px;
 }
@@ -592,4 +592,27 @@ margin:auto;
     -moz-transition: all 4s ease-in-out; /** Firefox **/
     -o-transition: all 4s ease-in-out; /** Opera **/
 	
+}
+ul{
+	list-style:none;
+	margin:0;
+	display:grid;	
+	padding:0;
+}
+li
+{
+	display:block;
+}
+button
+{
+	border:none;
+}
+.sub-status-item::before {
+ color:#ff7d84;
+content: "\2B24";
+padding-right: 10px;
+}
+.green_colour::before
+{
+	color:#9ee187;
 }
